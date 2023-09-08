@@ -14,7 +14,6 @@ type InputProps = {
   name?: string;
   register?: UseFormRegisterReturn;
   placeholder?: string;
-  type?: "password" | "text";
   label: string;
   isInvalid?: boolean;
   disabled?: boolean;

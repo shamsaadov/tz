@@ -14,17 +14,15 @@ type InputProps = {
 };
 
 export function Input({ register, type, mask, error, ...rest }: InputProps) {
-  if (mask != null) {
-    return (
-      <InputStyled
-        error={error}
-        as={InputMask}
-        mask={mask}
-        {...rest}
-        {...register}
-      />
-    );
-  }
-
-  return <InputStyled type={type} error={error} {...register} {...rest} />;
+  return mask ? (
+    <InputStyled
+      error={error}
+      as={InputMask}
+      mask={mask}
+      {...rest}
+      {...register}
+    />
+  ) : (
+    <InputStyled type={type} error={error} {...register} {...rest} />
+  );
 }

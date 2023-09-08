@@ -79,7 +79,6 @@ const SignUp = () => {
               message: "Некорректный формат",
             },
           })}
-          type={"password"}
           placeholder="Должно быть 8 символов"
           error={errors.password}
         />
@@ -93,7 +92,6 @@ const SignUp = () => {
               message: "Некорректный формат",
             },
           })}
-          type="password"
           placeholder="Повторите пароль"
           error={errors.confirmPassword}
         />
